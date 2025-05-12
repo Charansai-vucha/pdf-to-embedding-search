@@ -1,0 +1,74 @@
+1. Set up your environment
+Make sure you have the necessary libraries installed. You can do this by setting up a Python environment or using Google Colab (if you prefer not to install the libraries locally).
+
+Option 1: Using Local Python Environment
+Install Python: Make sure you have Python installed. You can download it from python.org.
+
+Create a virtual environment (optional but recommended for better dependency management):
+
+
+python -m venv venv
+source venv/bin/activate  # For macOS/Linux
+venv\Scripts\activate     # For Windows
+
+Install Required Libraries:
+
+Run the following command in your terminal to install the necessary libraries:
+
+
+pip install pymupdf sentence-transformers faiss-cpu
+
+
+Option 2: Using Google Colab
+Open a new Google Colab notebook.
+
+Run the following installation command to install the libraries:
+
+
+!pip install pymupdf sentence-transformers faiss-cpu
+
+
+2. Prepare the PDF file
+Make sure you have the PDF file ready, as the script requires it for extracting text. Place the PDF file in a directory and note the file path. You will replace 'path_to_your_pdf.pdf' with the actual file path in the code.
+
+3. Save the main.py file
+Copy the code provided in the main.py file.
+
+Save it as main.py in your project folder.
+
+4. Run the Script
+Option 1: Running Locally
+Once the environment is set up and dependencies are installed, you can run the script from your terminal.
+
+Open the terminal and navigate to the folder where your main.py file is located.
+
+Execute the script by running the following command:
+
+
+python main.py
+
+
+Option 2: Running in Google Colab
+Copy the code into a cell in your Google Colab notebook.
+
+Ensure that you upload your PDF file to Colab, or you can use Google Drive to load the file.
+
+Replace the pdf_path variable in the code with the correct file path, such as /content/your_pdf_file.pdf if you uploaded it to Colab.
+
+Run the code cells to see the output.
+
+5. Results
+The script will extract text from the PDF, create sentence embeddings, store them in a FAISS index, and then perform a similarity search based on your input query.
+
+The top similar sentences from the PDF will be printed as output.
+
+6. Optional (Using a Custom Query)
+You can modify the query used in the search. Change the value of the query variable in the code to your desired search string, for example:
+
+
+query = "What is the main topic of the PDF?"
+
+Notes:
+Ensure that the PDF file path is correct if running locally.
+
+For Google Colab, you may need to upload the PDF file or link it from Google Drive.
